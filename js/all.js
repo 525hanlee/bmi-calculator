@@ -1,6 +1,7 @@
 var data = JSON.parse(localStorage.getItem("data")) || [];
 var list = document.querySelector('.show-data');
 
+//加入資料到列表
 function addData() {
   var cm = document.querySelector('.input-cm').value;
   var kg = document.querySelector('.input-kg').value;
@@ -45,6 +46,7 @@ function addData() {
   showList();
 }
 
+//顯示列表
 function showList() {
   var str = '';
   for (var i = 0; i < data.length; i++) {
@@ -59,6 +61,7 @@ function showList() {
   list.innerHTML = str;
 }
 
+//顯示上方結果
 function showResult() {
   var str = '';
   var result = document.querySelector('.input-data-send');
@@ -79,6 +82,7 @@ function showResult() {
   });
 }
 
+//刪除資料
 function deleteData(event) {
   var num = event.target.className;
   var str = event.target.dataset.num;
