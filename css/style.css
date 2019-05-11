@@ -192,7 +192,6 @@ body{
   vertical-align: middle;
   text-align: center;
   border-left: 7px solid;
-  box-sizing: content-box;
   position: relative;
 }
 .card::before{
